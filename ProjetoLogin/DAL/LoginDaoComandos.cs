@@ -25,7 +25,7 @@ namespace ProjetoLogin.DAL
         public bool verificarLogin(string login, string senha)
         {
             //Comandos em SQL para procurar o login/senha no banco de dados.
-            cmd.CommandText = "select * from Logins where email = @login and senha = @senha";
+            cmd.CommandText = "select * from Logins where login = @login and senha = @senha";
             cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@senha", senha);
             try
